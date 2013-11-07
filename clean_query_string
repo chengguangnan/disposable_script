@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+Dir['*'].each do |file|
+  if file =~ /\?/
+    puts %Q!mv '#{file}' '#{file.gsub(/\?.*/, "")}'!
+  end
+end
